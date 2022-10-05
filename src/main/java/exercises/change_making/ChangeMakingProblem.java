@@ -1,10 +1,10 @@
-package exercises.givingtherest;
+package exercises.change_making;
 
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-public class TheRestProblem {
+public class ChangeMakingProblem {
 
     public static void main(String[] args) {
         giveTheRest();
