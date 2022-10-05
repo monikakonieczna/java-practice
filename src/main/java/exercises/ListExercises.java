@@ -50,8 +50,64 @@ public class ListExercises {
 
     /**
      * Exercise: Find 2 the smallest numbers from the list
+     * Additional condition: ignore the repetitions
      */
-    public static void find2TheSmallestNumbers(){
+    public static void find2TheSmallestNumbers() {
+        //test data
+        List<Integer> list = List.of(1, 2, 6, 8, 90);
+        List<Integer> list2 = List.of(1, 1, 6, 8, 90);
 
+        int l = list.size();
+        int smallest = Integer.MAX_VALUE;
+
+        //Traversing an array to find the smallest element
+        for (Integer integer : list) {
+            if (integer < smallest) {
+                smallest = integer;
+            }
+        }
+
+        System.out.println("Smallest element is: " + smallest);
+
+        //Traversing an array to find second-smallest element
+        int second_smallest = Integer.MAX_VALUE;
+        for (Integer integer : list) {
+            if (integer < second_smallest && integer > smallest) {
+                second_smallest = integer;
+            }
+        }
+        System.out.println("Second-smallest element is: " + second_smallest);
+    }
+
+    /**
+     * Exercise: Find 2 elements in list whose sum is closest to zero
+     */
+    public static void findSumClosestTo0(List<Integer> list){
+        /* Check if list have at least 2 elements */
+        if(list.size() < 2){
+            System.out.println("Invalid input. List should have at least 2 elements.");
+            return;
+        }
+
+        /*Implementation*/
+        int min_a = 0;
+        int min_b = 1;
+        int sum;
+        int min_sum = list.get(0) + list.get(1);
+        int a;
+        int b;
+
+        for (a = 0; a<list.size(); a++){
+            for(b = a + 1; b<list.size(); b++){
+                sum = list.get(a) + list.get(b);
+                if(Math.abs(min_sum) > Math.abs(sum)){
+                    min_sum  = sum;
+                    min_a = a;
+                    min_b = b;
+
+                }
+            }
+        }
+        System.out.println("The two elements whose sum is minimum are: " + list.get(min_a) + " and " + list.get(min_b));
     }
 }
