@@ -1,4 +1,4 @@
-package exercises.change_making;
+package exercises.problems;
 
 import java.util.InputMismatchException;
 import java.util.List;

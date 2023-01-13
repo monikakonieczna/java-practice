@@ -110,4 +110,15 @@ public class ListExercises {
         }
         System.out.println("The two elements whose sum is minimum are: " + list.get(min_a) + " and " + list.get(min_b));
     }
+
+    /**
+     * Find first element in the list starting with letter "A" without using "foreach", "for"
+     */
+    public static void findFirstElementStartingWithLetter(String letter){
+
+        List<String> list = List.of("Poland", "Australia", "Belgium", "Japan", "Canada", "Hungary", "India", "Germany", "Armenia");
+        String regex = letter + "[a-zA-Z]*";
+        String string = list.stream().filter(e -> e.matches(regex)).findFirst().get();
+        System.out.println(string);
+    }
 }

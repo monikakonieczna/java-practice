@@ -1,16 +1,15 @@
 import exercises.ListExercises;
-import exercises.StringExercises;
-
-import java.util.List;
+import exercises.streams.employees.Search;
 
 public class Main {
     public static void main(String[] args) {
         ListExercises.find2TheSmallestNumbers();
-        ListExercises.findSumClosestTo0(createList());
-    }
+        ListExercises.findFirstElementStartingWithLetter("A");
 
-    private static List createList(){
-        return List.of(1, 60, -10, 70, -80, 85);
+
+        //Java Stream API
+        Search search = new Search();
+        search.printEmployeesGroupedByTitle();
     }
 }
 

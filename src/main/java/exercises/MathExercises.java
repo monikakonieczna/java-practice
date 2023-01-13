@@ -3,7 +3,7 @@ package exercises;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MathExercise {
+public class MathExercises {
 
     /**
      * Returns the average of 3 integers
@@ -37,7 +37,7 @@ public class MathExercise {
     }
 
     /**
-     * Calculate average value of integeres from a list
+     * Calculate average value of integers from a list
      * @param list List<Integer> list
      * @return Average value
      */

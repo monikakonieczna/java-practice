@@ -1,4 +1,4 @@
-package exercises.streams;
+package exercises.streams.employees;
 
 import java.util.*;
 import java.util.Map.Entry;
