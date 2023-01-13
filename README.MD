@@ -19,6 +19,11 @@ out [the official documentation](https://projectlombok.org/) for detail.
 
 There are exercises which introduce the Stream API usage including filtering, sorting and the output to
 various formats.
+1.Find 1 element on the lists which starts with given letter/word.
+2.Find first/last element in the list.
+3.Sort elements on the list in reverse/natural order.
+4.Eliminate duplicates in the list.
+
 
 ### Simple algorithms
 
