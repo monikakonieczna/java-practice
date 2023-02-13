@@ -1,10 +1,13 @@
-package exercises.problems;
+package exercises.challenge_problems;
 
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-public class ChangeMakingProblem {
+/**
+ * Challenge 1: The change-making problem
+ */
+public class Challenge1 {
 
     public static void main(String[] args) {
         giveTheRest();

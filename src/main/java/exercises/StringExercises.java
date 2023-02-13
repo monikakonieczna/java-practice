@@ -20,7 +20,8 @@ public class StringExercises {
                         .append(a.charAt(i))
                         .append(b.charAt(i));
             }
-        } else {
+        }
+        else {
             if (a.length() > b.length()) {
                 for (int i = 0; i < b.length(); i++) {
                     sb
@@ -28,21 +29,24 @@ public class StringExercises {
                             .append(b.charAt(i));
                 }
                 sb.append(a.substring(b.length()));
-            } else if (b.length() > a.length()) {
-                for (int i = 0; i < a.length(); i++) {
-                    sb
-                            .append(a.charAt(i))
-                            .append(b.charAt(i));
-
-                }
-                sb.append(b.substring(a.length()));
             }
+            else
+                if (b.length() > a.length()) {
+                    for (int i = 0; i < a.length(); i++) {
+                        sb
+                                .append(a.charAt(i))
+                                .append(b.charAt(i));
+
+                    }
+                    sb.append(b.substring(a.length()));
+                }
         }
         System.out.println(sb);
     }
 
     /**
      * Exercise: Check if text is a Palindrome
+     *
      * @param text String to be checked
      */
     public static boolean isItAPalindrome(String text) {
@@ -54,6 +58,7 @@ public class StringExercises {
 
     /**
      * Exercise: Reverse the String
+     *
      * @param text String to be reversed
      */
     public static void reverseString(String text) {
@@ -66,6 +71,22 @@ public class StringExercises {
         }
         System.out.println("Original word:" + text);
         System.out.println("Reversed word:" + n);
+    }
+
+    public static String reverseString2(String in) {
+        if (in == null) {
+            throw new IllegalArgumentException("Null is not valid input!");
+        }
+
+        StringBuilder out = new StringBuilder();
+
+        char[] chars = in.toCharArray();
+
+        for (int i = chars.length - 1; i >= 0; i--) {
+            out.append(chars[i]);
+        }
+
+        return out.toString();
     }
 
 }

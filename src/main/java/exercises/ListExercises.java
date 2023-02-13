@@ -121,4 +121,8 @@ public class ListExercises {
         String string = list.stream().filter(e -> e.matches(regex)).findFirst().get();
         System.out.println(string);
     }
+
+    public static void listsSameElements(){
+        
+    }
 }
